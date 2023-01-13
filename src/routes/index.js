@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
 
+
 const Private = ({ Item }) => {
   const { signed } = useAuth();
 
@@ -20,6 +21,8 @@ const RoutesApp = () => {
           <Route path="/" element={<Signin />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route path="*" element={<Signin />} />
+          
+
         </Routes>
       </Fragment>
     </BrowserRouter>

@@ -6,32 +6,33 @@ import * as C from "./styles";
 import imagemIA from "../../imagens/ia.png";
 import imagemPy from "../../imagens/python.png";
 import imagemJs from "../../imagens/javascript.png";
-
+import quizimg from "../../imagens/quiz.png";
 
 
 const Home = () => {
   const { signout } = useAuth();
   const navigate = useNavigate();
-  const URl_quiz = "http://localhost:5173/";
+  
 
+  
   return (
     
-    
-    
+      
     <C.Container>
-      <C.Separador onClick={() => [navigate(URl_quiz)]}>
-        <img src={imagemIA} alt= ""/>
+      
+      <C.Separador onClick={() => [navigate()]}>
+       <a href="https://www.google.com/"><img src={imagemIA} alt= ""/></a>
         <img src={imagemPy} alt= ""/>
         <img src={imagemJs} alt= ""/>
       </C.Separador>
+    
       
       <C.Separador>
         <Button Text="Sair" onClick={() => [signout(), navigate("/")]}>
            Sair
         </Button>
-        <Button Text={"Ir para o quiz"} onClick={() => [navigate(URl_quiz)]} >
-          Ir para o quiz
-        </Button>
+        <a href="http://localhost:5173/"><img src={quizimg} alt="" /> </a>
+
       </C.Separador>
 
     </C.Container>
